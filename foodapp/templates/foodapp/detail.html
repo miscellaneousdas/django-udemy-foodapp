@@ -1,4 +1,4 @@
-{% extends "foodapp/base.html" %}
+{% extends "foodapp/base.html" %} 
 
 {%block body%}
 
@@ -14,6 +14,8 @@
             <h1>{{ item.item_name }}</h1>
             <h2>{{ item.item_desc }}</h1>
             <h3>${{ item.item_price }}</h3>
+            <a href="{% url 'foodapp:update_item' item.id %}">Update</a>
+            <a href="{% url 'foodapp:delete_item' item.id %}">Delete</a>
         </div>
     </div>
 </div>
