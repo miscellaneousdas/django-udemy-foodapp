@@ -30,7 +30,8 @@
         <a href="#" class="nav-item nav-link" href="#">View Item</a>
       </div>
     </nav>
-
-    {% block body %}{% endblock %}
+    {% if messages %} {% for message in messages %}
+    <div class="alert alert-success">{{ message }}</div>
+    {% endfor %} {% endif %} {% block body %}{% endblock %}
   </body>
 </html>
